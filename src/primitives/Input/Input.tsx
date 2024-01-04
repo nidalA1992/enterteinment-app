@@ -13,7 +13,7 @@ export const Input: FC<IInputProps> = ({
         type='text'
         {...props}
         className={
-          'border-greyishBlue caret-red text-b-m focus:border-pureWhite border-b bg-[transparent] p-4 transition-colors placeholder:opacity-50 focus:outline-none data-[error="true"]:border-red ' +
+          'border-greyishBlue caret-red text-b-m focus:border-pureWhite border-b bg-[transparent] p-4 transition-colors placeholder:opacity-50 focus:outline-none data-[error="true"]:border-red data-[error="true"]:pr-20 ' +
           className
         }
         data-error={!!errorMessage}

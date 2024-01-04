@@ -3,6 +3,7 @@ import { Outfit } from 'next/font/google';
 
 import './globals.css';
 import { Menu } from '@/widgets/Menu/Menu';
+import { Search } from '@/components';
 
 const outfit = Outfit({ subsets: ['latin'] });
 
@@ -21,12 +22,15 @@ export default function RootLayout({
       <body
         className={
           outfit.className +
-          ' container pl-8 pr-9 py-8 grid grid-cols-layout gap-9'
+          ' container pl-8 pr-9 py-8 grid grid-cols-layout grid-rows-[auto_1fr] gap-9'
         }>
-        <aside>
+        <aside className='col-start-1 row-start-1 row-end-3'>
           <Menu />
         </aside>
-        <main>{children}</main>
+        <div className='col-start-2'>
+          <Search />
+        </div>
+        <main className='col-start-2'>{children}</main>
       </body>
     </html>
   );
