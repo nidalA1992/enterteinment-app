@@ -13,3 +13,7 @@ body {
   color: theme(colors.pureWhite);
   line-height: normal;
 }
+
+*::selection {
+  background-color: theme(colors.red);
+}

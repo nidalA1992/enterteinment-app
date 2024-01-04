@@ -1,20 +1,21 @@
 import data from '@/data.json';
+
 import { MovieCard } from '@/components';
 import { FourColumn } from '@/layouts';
 import { Title } from '@/primitives';
 
-function getMovies() {
-  return data.filter(movie => movie.isTrending);
+function getBookmarkedSeries() {
+  return data.filter(movie => movie.category === 'TV Series');
 }
 
-export default function Home() {
-  const trendingMovies = getMovies();
+export default function TvSeriesPage() {
+  const series = getBookmarkedSeries();
 
   return (
     <>
       <FourColumn>
-        <Title>Recommended for you</Title>
-        {trendingMovies.map(m => (
+        <Title>TV Series</Title>
+        {series.map(m => (
           <MovieCard key={m.title} type='s' {...m} />
         ))}
       </FourColumn>

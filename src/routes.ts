@@ -2,5 +2,5 @@ export enum ROUTES {
   HOME = '/',
   BOOKMARKED = '/bookmarked',
   MOVIES = '/movies',
-  TV_SERIES = '/tv-series',
+  TV_SERIES = '/series',
 }

@@ -31,7 +31,7 @@ export default function RootLayout({
         <div className='col-start-2'>
           <Search />
         </div>
-        <main className='col-start-2'>{children}</main>
+        <main className='col-start-2 grid gap-10'>{children}</main>
       </body>
     </html>
   );

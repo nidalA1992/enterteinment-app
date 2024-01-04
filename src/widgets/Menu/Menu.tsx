@@ -3,7 +3,7 @@ import { Avatar, Logo } from '@/primitives';
 
 export const Menu = () => {
   return (
-    <div className='h-[92svh] max-h-[960px] gap-[75px] px-8 py-9 bg-semiDarkBlue rounded-[20px] flex flex-col items-center justify-between'>
+    <div className='h-[92svh] max-h-[960px] gap-[75px] px-7 py-8 bg-semiDarkBlue rounded-[20px] flex flex-col items-center justify-between'>
       <Logo />
       <Navigation />
       <div className='mb-auto'></div>
