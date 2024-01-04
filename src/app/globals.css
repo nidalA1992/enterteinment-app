@@ -7,3 +7,9 @@ html {
     'clig' off,
     'liga' off;
 }
+
+body {
+  background-color: theme(colors.darkBlue);
+  color: theme(colors.pureWhite);
+  line-height: normal;
+}

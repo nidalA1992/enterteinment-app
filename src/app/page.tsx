@@ -1,3 +1,5 @@
+import { Input } from '@/primitives';
+import { Button } from '@/primitives/Button/Button';
 import Image from 'next/image';
 
 export default function Home() {
@@ -20,6 +22,8 @@ export default function Home() {
         facere accusantium esse beatae consequatur, perferendis, tenetur iusto
         laborum, nobis animi!
       </p>
+      <Input placeholder='test' errorMessage='huinya' />
+      <Button>Login to your account</Button>
     </main>
   );
 }
