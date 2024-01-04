@@ -3,28 +3,34 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-import BookmarkIcon from './icons/icon-nav-bookmark.svg';
+import { ROUTES } from '@/routes';
+
 import HomeIcon from './icons/icon-nav-home.svg';
 import MoviesIcon from './icons/icon-nav-movies.svg';
 import SeriesIcon from './icons/icon-nav-tv-series.svg';
+import BookmarkIcon from './icons/icon-nav-bookmark.svg';
+
+const menuItems = [
+  { route: ROUTES.HOME, icon: <HomeIcon /> },
+  { route: ROUTES.MOVIES, icon: <MoviesIcon /> },
+  { route: ROUTES.TV_SERIES, icon: <SeriesIcon /> },
+  { route: ROUTES.BOOKMARKED, icon: <BookmarkIcon /> },
+];
 
 export const Navigation = () => {
   const pathname = usePathname();
 
   return (
     <nav className='flex flex-col items-center justify-center gap-10'>
-      <Link href='' className='hover:*:fill-red'>
-        <HomeIcon className='transition-colors' />
-      </Link>
-      <Link href='' className='hover:*:fill-red'>
-        <MoviesIcon className='transition-colors' />
-      </Link>
-      <Link href='' className='hover:*:fill-red'>
-        <SeriesIcon className='transition-colors' />
-      </Link>
-      <Link href='' className='hover:*:fill-red'>
-        <BookmarkIcon className='transition-colors' />
-      </Link>
+      {menuItems.map(({ route, icon }) => (
+        <Link
+          key={route}
+          href={route}
+          data-active={pathname === route}
+          className='hover:*:fill-red *:data-[active=true]:fill-pureWhite *:transition-colors'>
+          {icon}
+        </Link>
+      ))}
     </nav>
   );
 };

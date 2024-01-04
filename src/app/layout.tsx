@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import { Outfit } from 'next/font/google';
 
-import './globals.css';
-import { Menu } from '@/widgets/Menu/Menu';
+import '@/styles/globals.css';
+
+import { Menu } from '@/widgets';
 import { Search } from '@/components';
 
 const outfit = Outfit({ subsets: ['latin'] });

@@ -1,4 +1,3 @@
-import { tree } from 'next/dist/build/templates/app-page';
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
