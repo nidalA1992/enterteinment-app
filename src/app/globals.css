@@ -9,8 +9,7 @@ html {
 }
 
 body {
-  /* background-color: theme(colors.darkBlue); */
-  background-color: greenyellow;
+  background-color: theme(colors.darkBlue);
   color: theme(colors.pureWhite);
   line-height: normal;
 }
