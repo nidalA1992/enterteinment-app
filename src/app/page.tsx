@@ -1,10 +1,12 @@
 import { Input } from '@/primitives';
+import { Bookmark } from '@/primitives/Bookmark/Bookmark';
 import { Button } from '@/primitives/Button/Button';
 import Image from 'next/image';
 
 export default function Home() {
   return (
     <main className='flex min-h-screen flex-col items-center gap-5 p-12'>
+      <Bookmark />
       <p className='text-h-l'>Lorem ipsum dolor sit amet</p>
       <p className='text-h-m'>Lorem ipsum dolor sit amet</p>
       <p className='text-h-s'>Lorem ipsum dolor sit amet</p>

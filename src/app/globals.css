@@ -9,7 +9,8 @@ html {
 }
 
 body {
-  background-color: theme(colors.darkBlue);
+  /* background-color: theme(colors.darkBlue); */
+  background-color: greenyellow;
   color: theme(colors.pureWhite);
   line-height: normal;
 }
