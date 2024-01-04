@@ -1,11 +1,11 @@
 import { Navigation } from '@/components';
-import { Input } from '@/primitives';
-import { Bookmark } from '@/primitives/Bookmark/Bookmark';
-import { Button } from '@/primitives/Button/Button';
+import { Avatar, Bookmark, Button, Input, Logo } from '@/primitives';
 
 export default function Home() {
   return (
-    <main className='flex min-h-screen flex-col items-center gap-5 p-12'>
+    <div className='flex min-h-screen flex-col items-center gap-5'>
+      <Avatar src='/image-avatar.png' />
+      <Logo />
       <Navigation />
       <Bookmark />
       <p className='text-h-l'>Lorem ipsum dolor sit amet</p>
@@ -27,6 +27,6 @@ export default function Home() {
       </p>
       <Input placeholder='test' errorMessage='huinya' />
       <Button>Login to your account</Button>
-    </main>
+    </div>
   );
 }

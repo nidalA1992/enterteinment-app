@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Outfit } from 'next/font/google';
 
 import './globals.css';
+import { Menu } from '@/widgets/Menu/Menu';
 
 const outfit = Outfit({ subsets: ['latin'] });
 
@@ -17,7 +18,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={outfit.className}>{children}</body>
+      <body
+        className={
+          outfit.className +
+          ' container pl-8 pr-9 py-8 grid grid-cols-layout gap-9'
+        }>
+        <aside>
+          <Menu />
+        </aside>
+        <main>{children}</main>
+      </body>
     </html>
   );
 }

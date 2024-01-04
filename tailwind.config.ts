@@ -1,3 +1,4 @@
+import { tree } from 'next/dist/build/templates/app-page';
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
@@ -9,6 +10,12 @@ const config: Config = {
     './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    screens: {
+      '2xl': '1440px',
+    },
+    container: {
+      center: true,
+    },
     colors: {
       red: '#FC4747',
       darkBlue: '#10141E',
@@ -56,6 +63,9 @@ const config: Config = {
       ],
     },
     extend: {
+      gridTemplateColumns: {
+        layout: 'auto 1fr',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':

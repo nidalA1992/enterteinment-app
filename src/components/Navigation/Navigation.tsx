@@ -1,12 +1,12 @@
 'use client';
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 import BookmarkIcon from './icons/icon-nav-bookmark.svg';
 import HomeIcon from './icons/icon-nav-home.svg';
 import MoviesIcon from './icons/icon-nav-movies.svg';
 import SeriesIcon from './icons/icon-nav-tv-series.svg';
-import { usePathname } from 'next/navigation';
 
 export const Navigation = () => {
   const pathname = usePathname();
