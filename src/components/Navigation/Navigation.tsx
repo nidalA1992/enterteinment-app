@@ -5,10 +5,10 @@ import { usePathname } from 'next/navigation';
 
 import { ROUTES } from '@/routes';
 
-import HomeIcon from './icons/icon-nav-home.svg';
-import MoviesIcon from './icons/icon-nav-movies.svg';
-import SeriesIcon from './icons/icon-nav-tv-series.svg';
-import BookmarkIcon from './icons/icon-nav-bookmark.svg';
+import HomeIcon from '@/icons/icon-nav-home.svg';
+import MoviesIcon from '@/icons/icon-nav-movies.svg';
+import SeriesIcon from '@/icons/icon-nav-tv-series.svg';
+import BookmarkIcon from '@/icons/icon-nav-bookmark.svg';
 
 const menuItems = [
   { route: ROUTES.HOME, icon: <HomeIcon /> },
