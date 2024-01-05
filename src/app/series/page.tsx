@@ -5,7 +5,7 @@ import { FourColumn } from '@/layouts';
 import { Title } from '@/primitives';
 
 function getBookmarkedSeries() {
-  return data.filter(movie => movie.category === 'TV Series');
+  return data.filter((movie) => movie.category === 'TV Series');
 }
 
 export default function TvSeriesPage() {
@@ -15,7 +15,7 @@ export default function TvSeriesPage() {
     <>
       <FourColumn>
         <Title>TV Series</Title>
-        {series.map(m => (
+        {series.map((m) => (
           <MovieCard key={m.title} type='s' {...m} />
         ))}
       </FourColumn>

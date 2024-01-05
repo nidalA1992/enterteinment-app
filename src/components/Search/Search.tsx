@@ -28,11 +28,11 @@ export const Search = () => {
   }
 
   return (
-    <div className='flex gap-6 items-center last:*:w-full'>
+    <div className='flex items-center gap-6 last:*:w-full'>
       <LoupeIcon className='flex-shrink-0' />
       <Input
         placeholder={textContent}
-        className='border-opacity-0 w-full focus:border-greyishBlue px-0 py-[15px] text-h-m'
+        className='w-full border-opacity-0 px-0 py-[15px] text-h-m focus:border-greyishBlue'
       />
     </div>
   );

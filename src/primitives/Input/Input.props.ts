@@ -3,5 +3,5 @@ export interface IInputProps
     React.InputHTMLAttributes<HTMLInputElement>,
     HTMLInputElement
   > {
-		errorMessage?: string;
-	}
+  errorMessage?: string;
+}

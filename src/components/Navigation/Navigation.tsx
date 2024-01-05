@@ -26,8 +26,9 @@ export const Navigation = () => {
         <Link
           key={route}
           href={route}
-          data-active={pathname === route}
-          className='hover:*:fill-red *:data-[active=true]:fill-pureWhite *:transition-colors'>
+          data-active={pathname === String(route)}
+          className='*:transition-colors hover:*:fill-red *:data-[active=true]:fill-pureWhite'
+        >
           {icon}
         </Link>
       ))}

@@ -8,9 +8,10 @@ export const PlayButton: FC<IPlayButtonProps> = ({ className, ...props }) => {
     <button
       {...props}
       className={
-        'bg-pureWhite bg-opacity-25 rounded-full p-[9px] pr-6 flex items-center gap-[19px] ' +
+        'flex items-center gap-[19px] rounded-full bg-pureWhite bg-opacity-25 p-[9px] pr-6 ' +
         className
-      }>
+      }
+    >
       <PlayIcon />
       Play
     </button>

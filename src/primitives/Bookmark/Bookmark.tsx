@@ -11,16 +11,17 @@ export const Bookmark: FC<IBookmarkProps> = ({ className, ...props }) => {
       <input
         id={id}
         {...props}
-        className='peer appearance-none absolute'
+        className='peer absolute  appearance-none'
         type='checkbox'
       />
       <label
         htmlFor={id}
         className={
-          'peer-checked:*:hover:fill-red peer-checked:*:hover:stroke-red peer-checked:*:fill-pureWhite peer-checked:bg-darkBlue peer-checked:bg-opacity-50 hover:bg-pureWhite group w-8 h-8 flex justify-center items-center bg-darkBlue bg-opacity-50 rounded-full transition-colors cursor-pointer ' +
+          'group flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-darkBlue bg-opacity-50 transition-colors hover:bg-pureWhite peer-checked:bg-darkBlue peer-checked:bg-opacity-50 peer-checked:*:fill-pureWhite peer-checked:*:hover:fill-red peer-checked:*:hover:stroke-red ' +
           className
-        }>
-        <BookmarkIcon className='group-hover:stroke-darkBlue transition-colors' />
+        }
+      >
+        <BookmarkIcon className='transition-colors group-hover:stroke-darkBlue' />
       </label>
     </span>
   );

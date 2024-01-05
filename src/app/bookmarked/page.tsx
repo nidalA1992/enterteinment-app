@@ -5,12 +5,14 @@ import { FourColumn } from '@/layouts';
 import { Title } from '@/primitives';
 
 function getBookmarkedMovies() {
-  return data.filter(movie => movie.category === 'Movie' && movie.isBookmarked);
+  return data.filter(
+    (movie) => movie.category === 'Movie' && movie.isBookmarked,
+  );
 }
 
 function getBookmarkedSeries() {
   return data.filter(
-    movie => movie.category === 'TV Series' && movie.isBookmarked
+    (movie) => movie.category === 'TV Series' && movie.isBookmarked,
   );
 }
 
@@ -22,13 +24,13 @@ export default function BookmarkedPage() {
     <>
       <FourColumn>
         <Title>Bookmarked Movies</Title>
-        {movies.map(m => (
+        {movies.map((m) => (
           <MovieCard key={m.title} type='s' {...m} />
         ))}
       </FourColumn>
       <FourColumn>
         <Title>Bookmarked TV Series</Title>
-        {series.map(m => (
+        {series.map((m) => (
           <MovieCard key={m.title} type='s' {...m} />
         ))}
       </FourColumn>
