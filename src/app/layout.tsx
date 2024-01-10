@@ -27,7 +27,7 @@ export default function RootLayout({
         <div className='col-start-[main-start]'>
           <Search />
         </div>
-        <main className='col-start-[main-start] grid grid-cols-subgrid gap-10'>
+        <main className='col-start-[main-start] col-end-[end] grid grid-cols-subgrid gap-y-10'>
           {children}
         </main>
       </body>

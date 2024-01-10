@@ -25,13 +25,12 @@
   .custom-container {
     display: grid;
     grid-template-columns:
-      [start] 1fr [sidebar-start] auto [sidebar-end] 32px [main-start] minmax(
-        1240px,
-        1fr
-      )
+      [start] 1fr
+      [sidebar-start] auto [main-start] minmax(1240px, 1fr)
       [main-end] 1fr [end];
     grid-template-rows: auto auto;
     row-gap: 34px;
+    column-gap: 32px;
     padding-block: 32px;
   }
 }
