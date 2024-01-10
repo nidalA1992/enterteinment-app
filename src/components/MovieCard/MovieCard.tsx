@@ -15,7 +15,10 @@ const icons: Record<string, JSX.Element> = {
 
 export const MovieCard: FC<IMovieCardProps> = (props) => {
   return (
-    <article className='relative cursor-pointer' data-type={props.type}>
+    <article
+      className='relative flex-shrink-0 cursor-pointer'
+      data-type={props.type}
+    >
       <div className='group relative transition-opacity'>
         <Image
           width={props.type === 'm' ? 470 : 280}

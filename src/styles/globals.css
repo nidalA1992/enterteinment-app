@@ -2,18 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  font-feature-settings:
-    'clig' off,
-    'liga' off;
+@layer base {
+  html {
+    font-feature-settings:
+      'clig' off,
+      'liga' off;
+  }
+
+  body {
+    background-color: theme(colors.darkBlue);
+    color: theme(colors.pureWhite);
+    line-height: normal;
+    overflow-x: hidden;
+  }
+
+  *::selection {
+    background-color: theme(colors.red);
+  }
 }
 
-body {
-  background-color: theme(colors.darkBlue);
-  color: theme(colors.pureWhite);
-  line-height: normal;
-}
-
-*::selection {
-  background-color: theme(colors.red);
+@layer utilities {
+  .custom-container {
+    display: grid;
+    grid-template-columns:
+      [start] 1fr [sidebar-start] auto [sidebar-end] 32px [main-start] minmax(
+        1240px,
+        1fr
+      )
+      [main-end] 1fr [end];
+    grid-template-rows: auto auto;
+    row-gap: 34px;
+    padding-block: 32px;
+  }
 }

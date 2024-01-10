@@ -20,19 +20,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body
-        className={
-          outfit.className +
-          ' container grid grid-cols-layout grid-rows-[auto_1fr] gap-9 py-8 pl-8 pr-9'
-        }
-      >
-        <aside className='col-start-1 row-start-1 row-end-3'>
+      <body className={outfit.className + ' custom-container'}>
+        <aside className='col-start-[sidebar-start] row-start-1 row-end-[-1]'>
           <Menu />
         </aside>
-        <div className='col-start-2'>
+        <div className='col-start-[main-start]'>
           <Search />
         </div>
-        <main className='col-start-2 grid gap-10'>{children}</main>
+        <main className='col-start-[main-start] grid grid-cols-subgrid gap-10'>
+          {children}
+        </main>
       </body>
     </html>
   );
